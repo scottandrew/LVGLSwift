@@ -1,6 +1,6 @@
 [submodule "sources/LVGLSwift/lvgl"]
-	path = sources/LVGLSwift/lvgl
+	path = Sources/LVGLSwift/lvgl
 	url = git@github.com:lvgl/lvgl.git
 [submodule "sources/LVGLSwift/lv_drivers"]
-	path = sources/LVGLSwift/lv_drivers
+	path = Sources/LVGLSwift/lv_drivers
 	url = git@github.com:lvgl/lv_drivers.git
