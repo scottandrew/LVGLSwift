@@ -50,6 +50,7 @@ let package = Package(
                       "lvgl/src/core/lv_core.mk",
                       "lvgl/src/font/korean.ttf",
                       "lvgl/src/widgets/lv_widgets.mk",
+                      "lvgl/src/extra/README.md",
                       "lvgl/zephyr/module.yml",
                       "lv_drivers/LICENSE",
                       "lv_drivers/README.md",

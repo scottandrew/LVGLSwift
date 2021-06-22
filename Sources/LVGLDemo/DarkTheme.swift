@@ -55,15 +55,12 @@ class DarkTheme: Theme {
 
 extension DarkTheme: ThemeDelegate {
     func applyTheme(_ theme: Theme, toObject: Object) {
-        print("foo");
-       // debugPrint(pressed.colorFilter);
-        switch toObject {
+    switch toObject {
         case is Screen: toObject.addStyle(style: screen)
         case is Button:
             toObject.addStyle(style: button);
             toObject.addStyle(style: pressed, selector: LV_STATE_PRESSED)
-            let stuff = lv_obj_get_style_color_filter_dsc(toObject.lvObject, UInt32(LV_STATE_PRESSED))
-            debugPrint((stuff));
+            
         case is Arc:
             toObject.addStyle(style: arcIndicator)
             toObject.addStyle(style: arcIndicator, selector: LV_PART_INDICATOR)
