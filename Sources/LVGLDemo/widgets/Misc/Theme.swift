@@ -41,8 +41,8 @@ class Theme {
         lvTheme.user_data = nil
     }
 
-    init(primaryColor: Color? = nil, secondaryColor: Color? = nil, delegate: ThemeDelegate? = nil) {
-        let defaultTheme = lv_theme_basic_init(lv_disp_get_default())
+    init(primaryColor: Color, secondaryColor: Color, delegate: ThemeDelegate? = nil) {
+        // let defaultTheme = lv_theme_basic_init(lv_disp_get_default())
         
         lvTheme.apply_cb = {
                 (aTheme: UnsafeMutablePointer<_lv_theme_t>?, toObject: UnsafeMutablePointer<lv_obj_t>?) in
@@ -58,11 +58,11 @@ class Theme {
                 //themeToApply.applyHandler?(themeToApply, objectToApplyTo);
             }
         
-        lvTheme.parent = defaultTheme
+        lvTheme.parent = nil
         lvTheme.user_data = bridge(obj: self)
         lvTheme.disp = lv_disp_get_default()
-        lvTheme.color_primary = primaryColor?.lvColor ?? defaultTheme!.pointee.color_primary
-        lvTheme.color_secondary = secondaryColor?.lvColor ?? defaultTheme!.pointee.color_secondary
+        lvTheme.color_primary = primaryColor.lvColor
+        lvTheme.color_secondary = secondaryColor.lvColor
         lvTheme.font_small = lv_font_default()
         lvTheme.font_normal = lv_font_default()
         lvTheme.font_large = lv_font_default()

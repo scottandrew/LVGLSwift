@@ -21,6 +21,9 @@ let color = lv_color_black()
 
 let button = Button(parent: screen)
 let label = Label(parent: button);
+let arc = Arc(parent: screen);
+
+arc.setSize(width: 250, height: 250)
 
 button.center();
 

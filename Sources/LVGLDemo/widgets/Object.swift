@@ -45,8 +45,12 @@ class Object {
         eventHanlderMap[event.rawValue] = handler;
     }
     
-    func addStyle(style: Style, selector: lv_style_selector_t = 0) {
-        lv_obj_add_style(lvObject, &style.lvStyle, selector);
+    func addStyle(style: Style, selector: Int = 0) {
+        lv_obj_add_style(lvObject, &style.lvStyle, lv_style_selector_t(selector));
+    }
+    
+    func setSize(width: Int, height: Int) {
+        lv_obj_set_size(lvObject, lv_coord_t(width), lv_coord_t(height))
     }
     
     func center() {
