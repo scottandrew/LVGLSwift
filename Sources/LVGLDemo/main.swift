@@ -20,12 +20,15 @@ let screen:Screen = Screen()
 let color = lv_color_black()
 
 let button = Button(parent: screen)
-let label = Label(parent: button);
-let arc = Arc(parent: screen);
+let label = Label(parent: button)
+let arc = Arc(parent: screen)
+let slider = Slider(parent: screen)
 
 arc.setSize(width: 250, height: 250)
+slider.setSize(width: 150, height: 10)
 
 button.center();
+slider.center();
 
 label.text = "Foo"
 
